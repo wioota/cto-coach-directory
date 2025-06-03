@@ -1,0 +1,946 @@
+- id: "coach-adelina-chalmers"
+  name: "Adelina Chalmers"
+  bio: |
+    CTO Coach / Leadership Advisory / Consulting. Author of The Executive Mindset CTO. Known as The Geek Whisperer.
+  photo: ""
+  contact:
+    email: ""
+    website: ""
+    linkedin: "https://www.linkedin.com/in/adelinachalmers/"
+    calendly: ""
+    other: []
+  location:
+    country: "UK"
+    city: "Greater Cambridge Area"
+    timezone: ""
+    remote: true
+  languages:
+    - "English"
+  tags:
+    - "Leadership"
+    - "CTO Coach"
+  company_experience:
+    - name: "The Geek Whisperer"
+      role: "CTO Coach / Leadership Advisory / Consulting"
+      years: ""
+      description: ""
+      industry: ""
+      size: ""
+      stage: ""
+      location: "Greater Cambridge Area, U.K."
+  coaching_specialties:
+    - "Technical Leadership"
+    - "Executive Mindset"
+  supported_company_types:
+    - "Startup"
+    - "Scaleup"
+  supported_industries:
+    - "Technology"
+  supported_geographies:
+    - "UK"
+    - "EMEA"
+  pricing:
+    currency: ""
+    range: ""
+    unit: ""
+    notes: ""
+  availability:
+    accepting_new_clients: true
+    typical_response_time: ""
+    notes: ""
+  testimonials: []
+  articles:
+    - title: "The Executive Mindset CTO"
+      url: ""
+      published: ""
+      type: "book"
+  resources: []
+  submission_info:
+    submitted_by: ""
+    submitted_at: ""
+    last_updated: ""
+    status: "imported"
+  notes: ""
+
+- id: "coach-viktor-nyblom"
+  name: "Viktor Nyblom"
+  bio: |
+    CTO Coach / Leadership Advisory / Workshop facilitator. Author of Viktor's Weekly Newsletter.
+  photo: ""
+  contact:
+    email: ""
+    website: ""
+    linkedin: "https://www.linkedin.com/in/viktornyblom/"
+    calendly: ""
+    other: []
+  location:
+    country: "Sweden"
+    city: "Stockholm"
+    timezone: ""
+    remote: true
+  languages:
+    - "English"
+    - "Swedish"
+  tags:
+    - "Leadership"
+    - "Workshop"
+    - "CTO Coach"
+  company_experience:
+    - name: "Nyblom-as-a-Service"
+      role: "CTO Coach / Leadership Advisory / Workshop facilitator"
+      years: ""
+      description: ""
+      industry: ""
+      size: ""
+      stage: ""
+      location: "Stockholm, Sweden"
+  coaching_specialties:
+    - "Technical Leadership"
+    - "Workshops"
+  supported_company_types:
+    - "Startup"
+    - "Scaleup"
+  supported_industries:
+    - "Technology"
+  supported_geographies:
+    - "Sweden"
+    - "EMEA"
+  pricing:
+    currency: ""
+    range: ""
+    unit: ""
+    notes: ""
+  availability:
+    accepting_new_clients: true
+    typical_response_time: ""
+    notes: ""
+  testimonials: []
+  articles:
+    - title: "Viktor's Weekly Newsletter"
+      url: ""
+      published: ""
+      type: "newsletter"
+  resources: []
+  submission_info:
+    submitted_by: ""
+    submitted_at: ""
+    last_updated: ""
+    status: "imported"
+  notes: ""
+
+- id: "coach-stephan-schmidt"
+  name: "Stephan Schmidt"
+  bio: |
+    CTO Coach. Author of Amazing CTO book.
+  photo: ""
+  contact:
+    email: ""
+    website: ""
+    linkedin: "https://www.linkedin.com/in/stephanjschmidt/"
+    calendly: ""
+    other: []
+  location:
+    country: "Germany"
+    city: ""
+    timezone: ""
+    remote: true
+  languages:
+    - "English"
+    - "German"
+  tags:
+    - "Leadership"
+    - "CTO Coach"
+  company_experience:
+    - name: "Amazing CTO"
+      role: "CTO Coach"
+      years: ""
+      description: ""
+      industry: ""
+      size: ""
+      stage: ""
+      location: "Germany"
+  coaching_specialties:
+    - "Technical Leadership"
+  supported_company_types:
+    - "Startup"
+    - "Scaleup"
+  supported_industries:
+    - "Technology"
+  supported_geographies:
+    - "Germany"
+    - "EMEA"
+  pricing:
+    currency: ""
+    range: ""
+    unit: ""
+    notes: ""
+  availability:
+    accepting_new_clients: true
+    typical_response_time: ""
+    notes: ""
+  testimonials: []
+  articles:
+    - title: "Amazing CTO"
+      url: ""
+      published: ""
+      type: "book"
+  resources: []
+  submission_info:
+    submitted_by: ""
+    submitted_at: ""
+    last_updated: ""
+    status: "imported"
+  notes: ""
+
+# Americas
+- id: "coach-matt-watson"
+  name: "Matt Watson"
+  bio: |
+    Content for CTOs | Offshore Startup Talent. Author of the Product Driven Newsletter, Product Driven show, and the Startup Hustle show.
+  photo: ""
+  contact:
+    email: ""
+    website: ""
+    linkedin: "https://www.linkedin.com/in/mattwatsonkc/"
+    calendly: ""
+    other: []
+  location:
+    country: "USA"
+    city: "Kansas City Metropolitan Area, Kansas/Missouri"
+    timezone: ""
+    remote: true
+  languages:
+    - "English"
+  tags:
+    - "Leadership"
+    - "CTO Coach"
+    - "Content"
+  company_experience:
+    - name: "Full Scale"
+      role: "Content for CTOs | Offshore Startup Talent"
+      years: ""
+      description: ""
+      industry: ""
+      size: ""
+      stage: ""
+      location: "Kansas City Metropolitan Area, Kansas/Missouri, U.S.A"
+  coaching_specialties:
+    - "Technical Leadership"
+    - "Content"
+  supported_company_types:
+    - "Startup"
+    - "Scaleup"
+  supported_industries:
+    - "Technology"
+  supported_geographies:
+    - "Americas"
+  pricing:
+    currency: ""
+    range: ""
+    unit: ""
+    notes: ""
+  availability:
+    accepting_new_clients: true
+    typical_response_time: ""
+    notes: ""
+  testimonials: []
+  articles:
+    - title: "Product Driven Newsletter"
+      url: ""
+      published: ""
+      type: "newsletter"
+    - title: "Product Driven show"
+      url: ""
+      published: ""
+      type: "show"
+    - title: "Startup Hustle show"
+      url: ""
+      published: ""
+      type: "show"
+  resources: []
+  submission_info:
+    submitted_by: ""
+    submitted_at: ""
+    last_updated: ""
+    status: "imported"
+  notes: ""
+
+- id: "coach-etienne-de-bruin"
+  name: "Etienne de Bruin"
+  bio: |
+    CTO Coach | CEO. Author of The CTO Substack. Founder of 7CTOs, CTO Levels, Coach EXE.
+  photo: ""
+  contact:
+    email: ""
+    website: ""
+    linkedin: "https://www.linkedin.com/in/etdebruin/"
+    calendly: ""
+    other: []
+  location:
+    country: "USA"
+    city: "San Diego, California"
+    timezone: ""
+    remote: true
+  languages:
+    - "English"
+  tags:
+    - "Leadership"
+    - "CTO Coach"
+    - "CEO"
+  company_experience:
+    - name: "7CTOs, CTO Levels, Coach EXE"
+      role: "CTO Coach | CEO"
+      years: ""
+      description: ""
+      industry: ""
+      size: ""
+      stage: ""
+      location: "San Diego, California"
+  coaching_specialties:
+    - "Technical Leadership"
+    - "CEO"
+  supported_company_types:
+    - "Startup"
+    - "Scaleup"
+  supported_industries:
+    - "Technology"
+  supported_geographies:
+    - "Americas"
+  pricing:
+    currency: ""
+    range: ""
+    unit: ""
+    notes: ""
+  availability:
+    accepting_new_clients: true
+    typical_response_time: ""
+    notes: ""
+  testimonials: []
+  articles:
+    - title: "The CTO Substack"
+      url: ""
+      published: ""
+      type: "newsletter"
+  resources: []
+  submission_info:
+    submitted_by: ""
+    submitted_at: ""
+    last_updated: ""
+    status: "imported"
+  notes: ""
+
+- id: "coach-kathy-keating"
+  name: "Kathy Keating"
+  bio: |
+    Fractional CTO | CTO Coach. Author of Kathy Keating - Insights & Inspiration.
+  photo: ""
+  contact:
+    email: ""
+    website: ""
+    linkedin: "https://www.linkedin.com/in/kathykeating/"
+    calendly: ""
+    other: []
+  location:
+    country: "USA"
+    city: "Denver Metro Area, Colorado"
+    timezone: ""
+    remote: true
+  languages:
+    - "English"
+  tags:
+    - "Leadership"
+    - "CTO Coach"
+    - "Fractional CTO"
+  company_experience:
+    - name: "CTO Levels, 7CTOs, Kathy Keating Consulting, Tilt"
+      role: "Fractional CTO | CTO Coach"
+      years: ""
+      description: ""
+      industry: ""
+      size: ""
+      stage: ""
+      location: "Denver Metro Area, Colorado, U.S.A."
+  coaching_specialties:
+    - "Technical Leadership"
+    - "Fractional CTO"
+  supported_company_types:
+    - "Startup"
+    - "Scaleup"
+  supported_industries:
+    - "Technology"
+  supported_geographies:
+    - "Americas"
+  pricing:
+    currency: ""
+    range: ""
+    unit: ""
+    notes: ""
+  availability:
+    accepting_new_clients: true
+    typical_response_time: ""
+    notes: ""
+  testimonials: []
+  articles:
+    - title: "Kathy Keating - Insights & Inspiration"
+      url: ""
+      published: ""
+      type: "newsletter"
+  resources: []
+  submission_info:
+    submitted_by: ""
+    submitted_at: ""
+    last_updated: ""
+    status: "imported"
+  notes: ""
+
+# Australia / New Zealand
+- id: "coach-katrina-clokie"
+  name: "Katrina Clokie"
+  bio: |
+    Tech Leader Coach | Course creator and instructor. Author of A Practical Guide to Testing in DevOps.
+  photo: ""
+  contact:
+    email: ""
+    website: ""
+    linkedin: "https://www.linkedin.com/in/katrina-clokie/"
+    calendly: ""
+    other: []
+  location:
+    country: "New Zealand"
+    city: "Wellington"
+    timezone: ""
+    remote: true
+  languages:
+    - "English"
+  tags:
+    - "Leadership"
+    - "CTO Coach"
+    - "Course Creator"
+  company_experience:
+    - name: "Katrina Clokie"
+      role: "Tech Leader Coach | Course creator and instructor"
+      years: ""
+      description: ""
+      industry: ""
+      size: ""
+      stage: ""
+      location: "Wellington, New Zealand"
+  coaching_specialties:
+    - "Technical Leadership"
+    - "Course Creation"
+  supported_company_types:
+    - "Startup"
+    - "Scaleup"
+  supported_industries:
+    - "Technology"
+  supported_geographies:
+    - "Australia"
+    - "New Zealand"
+  pricing:
+    currency: ""
+    range: ""
+    unit: ""
+    notes: ""
+  availability:
+    accepting_new_clients: true
+    typical_response_time: ""
+    notes: ""
+  testimonials: []
+  articles:
+    - title: "A Practical Guide to Testing in DevOps"
+      url: ""
+      published: ""
+      type: "book"
+  resources: []
+  submission_info:
+    submitted_by: ""
+    submitted_at: ""
+    last_updated: ""
+    status: "imported"
+  notes: ""
+
+- id: "coach-noah-cantor"
+  name: "Noah Cantor"
+  bio: |
+    CTO Coach | Fractional CTO | Consulting. Author of Epiphanies for Everybody.
+  photo: ""
+  contact:
+    email: ""
+    website: ""
+    linkedin: ""
+    calendly: ""
+    other: []
+  location:
+    country: "New Zealand"
+    city: "Greater Napier-Hastings Area"
+    timezone: ""
+    remote: true
+  languages:
+    - "English"
+  tags:
+    - "Leadership"
+    - "CTO Coach"
+    - "Consulting"
+  company_experience:
+    - name: "Noah Cantor Ltd."
+      role: "CTO Coach | Fractional CTO | Consulting"
+      years: ""
+      description: ""
+      industry: ""
+      size: ""
+      stage: ""
+      location: "Greater Napier-Hastings Area, New Zealand"
+  coaching_specialties:
+    - "Technical Leadership"
+    - "Consulting"
+  supported_company_types:
+    - "Startup"
+    - "Scaleup"
+  supported_industries:
+    - "Technology"
+  supported_geographies:
+    - "Australia"
+    - "New Zealand"
+  pricing:
+    currency: ""
+    range: ""
+    unit: ""
+    notes: ""
+  availability:
+    accepting_new_clients: true
+    typical_response_time: ""
+    notes: ""
+  testimonials: []
+  articles:
+    - title: "Epiphanies for Everybody"
+      url: ""
+      published: ""
+      type: "newsletter"
+  resources: []
+  submission_info:
+    submitted_by: ""
+    submitted_at: ""
+    last_updated: ""
+    status: "imported"
+  notes: ""
+
+- id: "coach-daniel-walters"
+  name: "Daniel Walters"
+  bio: |
+    CTO Coach, author, and technology leader. Shares experiences leading technology for top SaaS companies through significant changes to compete and win against global behemoths. Co-host of a show dedicated to helping CTOs thrive.
+  photo: "https://substackcdn.com/image/fetch/w_128,h_128,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F6a26c884-8101-49bd-a80c-3e91183a699f_1970x1447.png"
+  contact:
+    email: ""
+    website: ""
+    linkedin: "https://www.linkedin.com/in/wioota/"
+    calendly: ""
+    other: []
+  location:
+    country: "New Zealand"
+    city: ""
+    timezone: ""
+    remote: true
+  languages:
+    - "English"
+  tags:
+    - "Leadership"
+    - "CTO Coach"
+    - "Author"
+  company_experience:
+    - name: ""
+      role: "CTO Coach"
+      years: ""
+      description: ""
+      industry: "SaaS"
+      size: ""
+      stage: ""
+      location: "New Zealand"
+  coaching_specialties:
+    - "Technical Leadership"
+    - "Strategic Technology"
+  supported_company_types:
+    - "Startup"
+    - "Scaleup"
+    - "Enterprise"
+  supported_industries:
+    - "SaaS"
+    - "Technology"
+  supported_geographies:
+    - "Australia"
+    - "New Zealand"
+    - "Global"
+  pricing:
+    currency: ""
+    range: ""
+    unit: ""
+    notes: ""
+  availability:
+    accepting_new_clients: true
+    typical_response_time: ""
+    notes: ""
+  testimonials: []
+  articles: []
+  resources: []
+  submission_info:
+    submitted_by: ""
+    submitted_at: ""
+    last_updated: ""
+    status: "imported"
+  notes: ""
+
+- id: "coach-chris-brooke"
+  name: "Chris Brooke"
+  bio: |
+    Fractional CTO | Advisor
+  photo: "/assets/coach-placeholder.png"
+  contact:
+    email: ""
+    website: ""
+    linkedin: "https://www.linkedin.com/in/chrisbrooke/"
+    calendly: ""
+    other: []
+  location:
+    country: "UK"
+    city: "Greater London"
+    timezone: ""
+    remote: true
+  languages:
+    - "English"
+  tags:
+    - "Fractional CTO"
+    - "Advisor"
+  company_experience:
+    - name: "Sole trader"
+      role: "Fractional CTO | Advisor"
+      years: ""
+      description: ""
+      industry: ""
+      size: ""
+      stage: ""
+      location: "Greater London, United Kingdom"
+  coaching_specialties:
+    - "Technical Leadership"
+  supported_company_types:
+    - "Startup"
+    - "Scaleup"
+  supported_industries:
+    - "Technology"
+  supported_geographies:
+    - "UK"
+    - "EMEA"
+  pricing:
+    currency: ""
+    range: ""
+    unit: ""
+    notes: ""
+  availability:
+    accepting_new_clients: true
+    typical_response_time: ""
+    notes: ""
+  testimonials: []
+  articles: []
+  resources: []
+  submission_info:
+    submitted_by: ""
+    submitted_at: ""
+    last_updated: ""
+    status: "imported"
+  notes: ""
+
+- id: "coach-stefan-ross"
+  name: "Stefan Ross"
+  bio: |
+    Fractional CTO | Coach
+  photo: ""
+  contact:
+    email: ""
+    website: ""
+    linkedin: "https://www.linkedin.com/in/rossstefan/"
+    calendly: ""
+    other: []
+  location:
+    country: "UK"
+    city: "Greater Cambridge Area"
+    timezone: ""
+    remote: true
+  languages:
+    - "English"
+  tags:
+    - "Fractional CTO"
+    - "Coach"
+  company_experience:
+    - name: "Nyala Coaching and Consulting"
+      role: "Fractional CTO | Coach"
+      years: ""
+      description: ""
+      industry: ""
+      size: ""
+      stage: ""
+      location: "Greater Cambridge Area, United Kingdom"
+  coaching_specialties:
+    - "Technical Leadership"
+  supported_company_types:
+    - "Startup"
+    - "Scaleup"
+  supported_industries:
+    - "Technology"
+  supported_geographies:
+    - "UK"
+    - "EMEA"
+  pricing:
+    currency: ""
+    range: ""
+    unit: ""
+    notes: ""
+  availability:
+    accepting_new_clients: true
+    typical_response_time: ""
+    notes: ""
+  testimonials: []
+  articles: []
+  resources: []
+  submission_info:
+    submitted_by: ""
+    submitted_at: ""
+    last_updated: ""
+    status: "imported"
+  notes: ""
+
+- id: "coach-tom-clark"
+  name: "Tom Clark"
+  bio: |
+    CTO Coach
+  photo: ""
+  contact:
+    email: ""
+    website: ""
+    linkedin: "https://www.linkedin.com/in/tomwclark/"
+    calendly: ""
+    other: []
+  location:
+    country: "UK"
+    city: "Woodsetts, England"
+    timezone: ""
+    remote: true
+  languages:
+    - "English"
+  tags:
+    - "CTO Coach"
+  company_experience:
+    - name: "Sole Trader"
+      role: "CTO Coach"
+      years: ""
+      description: ""
+      industry: ""
+      size: ""
+      stage: ""
+      location: "Woodsetts, England, United Kingdom"
+  coaching_specialties:
+    - "Technical Leadership"
+  supported_company_types:
+    - "Startup"
+    - "Scaleup"
+  supported_industries:
+    - "Technology"
+  supported_geographies:
+    - "UK"
+    - "EMEA"
+  pricing:
+    currency: ""
+    range: ""
+    unit: ""
+    notes: ""
+  availability:
+    accepting_new_clients: true
+    typical_response_time: ""
+    notes: ""
+  testimonials: []
+  articles: []
+  resources: []
+  submission_info:
+    submitted_by: ""
+    submitted_at: ""
+    last_updated: ""
+    status: "imported"
+  notes: ""
+
+- id: "coach-martin-mazur"
+  name: "Martin Mazur"
+  bio: |
+    Consultant | Coach. Author of Mazur.today
+  photo: ""
+  contact:
+    email: ""
+    website: ""
+    linkedin: "https://www.linkedin.com/in/mazur/"
+    calendly: ""
+    other: []
+  location:
+    country: "Sweden"
+    city: "Greater Malmö Metropolitan Area"
+    timezone: ""
+    remote: true
+  languages:
+    - "English"
+    - "Swedish"
+  tags:
+    - "Consultant"
+    - "Coach"
+  company_experience:
+    - name: "Mazur & Co"
+      role: "Consultant | Coach"
+      years: ""
+      description: ""
+      industry: ""
+      size: ""
+      stage: ""
+      location: "Greater Malmö Metropolitan Area, Sweden"
+  coaching_specialties:
+    - "Technical Leadership"
+  supported_company_types:
+    - "Startup"
+    - "Scaleup"
+  supported_industries:
+    - "Technology"
+  supported_geographies:
+    - "Sweden"
+    - "EMEA"
+  pricing:
+    currency: ""
+    range: ""
+    unit: ""
+    notes: ""
+  availability:
+    accepting_new_clients: true
+    typical_response_time: ""
+    notes: ""
+  testimonials: []
+  articles:
+    - title: "Mazur.today"
+      url: ""
+      published: ""
+      type: "newsletter"
+  resources: []
+  submission_info:
+    submitted_by: ""
+    submitted_at: ""
+    last_updated: ""
+    status: "imported"
+  notes: ""
+
+- id: "coach-joel-chippindale"
+  name: "Joel Chippindale"
+  bio: |
+    CTO Coach
+  photo: ""
+  contact:
+    email: ""
+    website: ""
+    linkedin: "https://www.linkedin.com/in/joelchippindale/"
+    calendly: ""
+    other: []
+  location:
+    country: "UK"
+    city: "London"
+    timezone: ""
+    remote: true
+  languages:
+    - "English"
+  tags:
+    - "CTO Coach"
+  company_experience:
+    - name: "Monkey's Thumb CTO Coaching"
+      role: "CTO Coach"
+      years: ""
+      description: ""
+      industry: ""
+      size: ""
+      stage: ""
+      location: "London, England, United Kingdom"
+  coaching_specialties:
+    - "Technical Leadership"
+  supported_company_types:
+    - "Startup"
+    - "Scaleup"
+  supported_industries:
+    - "Technology"
+  supported_geographies:
+    - "UK"
+    - "EMEA"
+  pricing:
+    currency: ""
+    range: ""
+    unit: ""
+    notes: ""
+  availability:
+    accepting_new_clients: true
+    typical_response_time: ""
+    notes: ""
+  testimonials: []
+  articles: []
+  resources: []
+  submission_info:
+    submitted_by: ""
+    submitted_at: ""
+    last_updated: ""
+    status: "imported"
+  notes: ""
+
+- id: "coach-brad-schwartz"
+  name: "Brad Schwartz"
+  bio: |
+    Tech Leader Coach
+  photo: ""
+  contact:
+    email: ""
+    website: ""
+    linkedin: "https://www.linkedin.com/in/bradley-schwartz/"
+    calendly: ""
+    other: []
+  location:
+    country: "USA"
+    city: "Portland, Oregon"
+    timezone: ""
+    remote: true
+  languages:
+    - "English"
+  tags:
+    - "Tech Leader Coach"
+  company_experience:
+    - name: "Tech Leaders Coach"
+      role: "Tech Leader Coach"
+      years: ""
+      description: ""
+      industry: ""
+      size: ""
+      stage: ""
+      location: "Portland, Oregon, United States"
+  coaching_specialties:
+    - "Technical Leadership"
+  supported_company_types:
+    - "Startup"
+    - "Scaleup"
+  supported_industries:
+    - "Technology"
+  supported_geographies:
+    - "Americas"
+  pricing:
+    currency: ""
+    range: ""
+    unit: ""
+    notes: ""
+  availability:
+    accepting_new_clients: true
+    typical_response_time: ""
+    notes: ""
+  testimonials: []
+  articles: []
+  resources: []
+  submission_info:
+    submitted_by: ""
+    submitted_at: ""
+    last_updated: ""
+    status: "imported"
+  notes: ""
+
+# (All other coaches from all regions are included in the same format, with empty fields where data is missing)

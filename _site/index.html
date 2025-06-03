@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CTO Coach Directory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <!-- Removed inline style block to allow external styles.css to take effect -->
+</head>
+<body>
+  <header class="site-header">
+    <img src="https://substackcdn.com/image/fetch/w_80,h_80,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd09374a4-f0ad-4534-90e7-54aad90e6100_720x720.png" alt="GreatCTO Logo" class="site-logo">
+    <h1 class="directory-title">CTO Coach Directory</h1>
+    <div class="site-header-spacer"></div>
+  </header>
+  
+<div class="filter-bar">
+  <label>
+    Region:
+    <select id="region-filter">
+      <option value="">All</option>
+      <option value="UK">UK</option>
+      <option value="EMEA">EMEA</option>
+      <option value="Americas">Americas</option>
+      <option value="Australia">Australia</option>
+      <option value="New Zealand">New Zealand</option>
+    </select>
+  </label>
+  <label>
+    Specialty:
+    <select id="specialty-filter">
+      <option value="">All</option>
+      
+        
+          <option value="Technical Leadership">Technical Leadership</option>
+        
+          <option value="Executive Mindset">Executive Mindset</option>
+        
+      
+        
+          <option value="Technical Leadership">Technical Leadership</option>
+        
+          <option value="Workshops">Workshops</option>
+        
+      
+        
+          <option value="Technical Leadership">Technical Leadership</option>
+        
+      
+        
+          <option value="Technical Leadership">Technical Leadership</option>
+        
+          <option value="Content">Content</option>
+        
+      
+        
+          <option value="Technical Leadership">Technical Leadership</option>
+        
+          <option value="CEO">CEO</option>
+        
+      
+        
+          <option value="Technical Leadership">Technical Leadership</option>
+        
+          <option value="Fractional CTO">Fractional CTO</option>
+        
+      
+        
+          <option value="Technical Leadership">Technical Leadership</option>
+        
+          <option value="Course Creation">Course Creation</option>
+        
+      
+        
+          <option value="Technical Leadership">Technical Leadership</option>
+        
+          <option value="Consulting">Consulting</option>
+        
+      
+        
+          <option value="Technical Leadership">Technical Leadership</option>
+        
+          <option value="Strategic Technology">Strategic Technology</option>
+        
+      
+        
+          <option value="Technical Leadership">Technical Leadership</option>
+        
+      
+        
+          <option value="Technical Leadership">Technical Leadership</option>
+        
+      
+        
+          <option value="Technical Leadership">Technical Leadership</option>
+        
+      
+        
+          <option value="Technical Leadership">Technical Leadership</option>
+        
+      
+        
+          <option value="Technical Leadership">Technical Leadership</option>
+        
+      
+        
+          <option value="Technical Leadership">Technical Leadership</option>
+        
+      
+    </select>
+  </label>
+  <label>
+    Remote:
+    <select id="remote-filter">
+      <option value="">All</option>
+      <option value="true">Remote</option>
+      <option value="false">Onsite</option>
+    </select>
+  </label>
+</div>
+
+<div class="coach-directory" id="coach-directory">
+  
+    <div class="coach-card" 
+         data-region="UK"
+         data-specialties="Technical Leadership,Executive Mindset"
+         data-remote="true">
+      <img class="coach-photo" src="" alt="Photo of Adelina Chalmers">
+      <div class="coach-info">
+        <h2>Adelina Chalmers</h2>
+        <p class="coach-bio">CTO Coach / Leadership Advisory / Consulting. Author of The Executive Mindset CTO. Known as The Geek Whisperer.
+</p>
+        <div class="coach-tags">
+          
+            <span class="tag">Leadership</span>
+          
+            <span class="tag">CTO Coach</span>
+          
+        </div>
+        <div class="coach-meta">
+          <span><strong>Location:</strong> Greater Cambridge Area, UK</span><br>
+          <span><strong>Languages:</strong> English</span><br>
+          <span><strong>Specialties:</strong> Technical Leadership, Executive Mindset</span>
+        </div>
+        <div class="coach-links">
+          <a href="" target="_blank">Website</a>
+          <a href="https://www.linkedin.com/in/adelinachalmers/" target="_blank">LinkedIn</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="coach-card" 
+         data-region="Sweden"
+         data-specialties="Technical Leadership,Workshops"
+         data-remote="true">
+      <img class="coach-photo" src="" alt="Photo of Viktor Nyblom">
+      <div class="coach-info">
+        <h2>Viktor Nyblom</h2>
+        <p class="coach-bio">CTO Coach / Leadership Advisory / Workshop facilitator. Author of Viktor&#39;s Weekly Newsletter.
+</p>
+        <div class="coach-tags">
+          
+            <span class="tag">Leadership</span>
+          
+            <span class="tag">Workshop</span>
+          
+            <span class="tag">CTO Coach</span>
+          
+        </div>
+        <div class="coach-meta">
+          <span><strong>Location:</strong> Stockholm, Sweden</span><br>
+          <span><strong>Languages:</strong> English, Swedish</span><br>
+          <span><strong>Specialties:</strong> Technical Leadership, Workshops</span>
+        </div>
+        <div class="coach-links">
+          <a href="" target="_blank">Website</a>
+          <a href="https://www.linkedin.com/in/viktornyblom/" target="_blank">LinkedIn</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="coach-card" 
+         data-region="Germany"
+         data-specialties="Technical Leadership"
+         data-remote="true">
+      <img class="coach-photo" src="" alt="Photo of Stephan Schmidt">
+      <div class="coach-info">
+        <h2>Stephan Schmidt</h2>
+        <p class="coach-bio">CTO Coach. Author of Amazing CTO book.
+</p>
+        <div class="coach-tags">
+          
+            <span class="tag">Leadership</span>
+          
+            <span class="tag">CTO Coach</span>
+          
+        </div>
+        <div class="coach-meta">
+          <span><strong>Location:</strong> , Germany</span><br>
+          <span><strong>Languages:</strong> English, German</span><br>
+          <span><strong>Specialties:</strong> Technical Leadership</span>
+        </div>
+        <div class="coach-links">
+          <a href="" target="_blank">Website</a>
+          <a href="https://www.linkedin.com/in/stephanjschmidt/" target="_blank">LinkedIn</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="coach-card" 
+         data-region="USA"
+         data-specialties="Technical Leadership,Content"
+         data-remote="true">
+      <img class="coach-photo" src="" alt="Photo of Matt Watson">
+      <div class="coach-info">
+        <h2>Matt Watson</h2>
+        <p class="coach-bio">Content for CTOs | Offshore Startup Talent. Author of the Product Driven Newsletter, Product Driven show, and the Startup Hustle show.
+</p>
+        <div class="coach-tags">
+          
+            <span class="tag">Leadership</span>
+          
+            <span class="tag">CTO Coach</span>
+          
+            <span class="tag">Content</span>
+          
+        </div>
+        <div class="coach-meta">
+          <span><strong>Location:</strong> Kansas City Metropolitan Area, Kansas/Missouri, USA</span><br>
+          <span><strong>Languages:</strong> English</span><br>
+          <span><strong>Specialties:</strong> Technical Leadership, Content</span>
+        </div>
+        <div class="coach-links">
+          <a href="" target="_blank">Website</a>
+          <a href="https://www.linkedin.com/in/mattwatsonkc/" target="_blank">LinkedIn</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="coach-card" 
+         data-region="USA"
+         data-specialties="Technical Leadership,CEO"
+         data-remote="true">
+      <img class="coach-photo" src="" alt="Photo of Etienne de Bruin">
+      <div class="coach-info">
+        <h2>Etienne de Bruin</h2>
+        <p class="coach-bio">CTO Coach | CEO. Author of The CTO Substack. Founder of 7CTOs, CTO Levels, Coach EXE.
+</p>
+        <div class="coach-tags">
+          
+            <span class="tag">Leadership</span>
+          
+            <span class="tag">CTO Coach</span>
+          
+            <span class="tag">CEO</span>
+          
+        </div>
+        <div class="coach-meta">
+          <span><strong>Location:</strong> San Diego, California, USA</span><br>
+          <span><strong>Languages:</strong> English</span><br>
+          <span><strong>Specialties:</strong> Technical Leadership, CEO</span>
+        </div>
+        <div class="coach-links">
+          <a href="" target="_blank">Website</a>
+          <a href="https://www.linkedin.com/in/etdebruin/" target="_blank">LinkedIn</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="coach-card" 
+         data-region="USA"
+         data-specialties="Technical Leadership,Fractional CTO"
+         data-remote="true">
+      <img class="coach-photo" src="" alt="Photo of Kathy Keating">
+      <div class="coach-info">
+        <h2>Kathy Keating</h2>
+        <p class="coach-bio">Fractional CTO | CTO Coach. Author of Kathy Keating - Insights &amp; Inspiration.
+</p>
+        <div class="coach-tags">
+          
+            <span class="tag">Leadership</span>
+          
+            <span class="tag">CTO Coach</span>
+          
+            <span class="tag">Fractional CTO</span>
+          
+        </div>
+        <div class="coach-meta">
+          <span><strong>Location:</strong> Denver Metro Area, Colorado, USA</span><br>
+          <span><strong>Languages:</strong> English</span><br>
+          <span><strong>Specialties:</strong> Technical Leadership, Fractional CTO</span>
+        </div>
+        <div class="coach-links">
+          <a href="" target="_blank">Website</a>
+          <a href="https://www.linkedin.com/in/kathykeating/" target="_blank">LinkedIn</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="coach-card" 
+         data-region="New Zealand"
+         data-specialties="Technical Leadership,Course Creation"
+         data-remote="true">
+      <img class="coach-photo" src="" alt="Photo of Katrina Clokie">
+      <div class="coach-info">
+        <h2>Katrina Clokie</h2>
+        <p class="coach-bio">Tech Leader Coach | Course creator and instructor. Author of A Practical Guide to Testing in DevOps.
+</p>
+        <div class="coach-tags">
+          
+            <span class="tag">Leadership</span>
+          
+            <span class="tag">CTO Coach</span>
+          
+            <span class="tag">Course Creator</span>
+          
+        </div>
+        <div class="coach-meta">
+          <span><strong>Location:</strong> Wellington, New Zealand</span><br>
+          <span><strong>Languages:</strong> English</span><br>
+          <span><strong>Specialties:</strong> Technical Leadership, Course Creation</span>
+        </div>
+        <div class="coach-links">
+          <a href="" target="_blank">Website</a>
+          <a href="https://www.linkedin.com/in/katrina-clokie/" target="_blank">LinkedIn</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="coach-card" 
+         data-region="New Zealand"
+         data-specialties="Technical Leadership,Consulting"
+         data-remote="true">
+      <img class="coach-photo" src="" alt="Photo of Noah Cantor">
+      <div class="coach-info">
+        <h2>Noah Cantor</h2>
+        <p class="coach-bio">CTO Coach | Fractional CTO | Consulting. Author of Epiphanies for Everybody.
+</p>
+        <div class="coach-tags">
+          
+            <span class="tag">Leadership</span>
+          
+            <span class="tag">CTO Coach</span>
+          
+            <span class="tag">Consulting</span>
+          
+        </div>
+        <div class="coach-meta">
+          <span><strong>Location:</strong> Greater Napier-Hastings Area, New Zealand</span><br>
+          <span><strong>Languages:</strong> English</span><br>
+          <span><strong>Specialties:</strong> Technical Leadership, Consulting</span>
+        </div>
+        <div class="coach-links">
+          <a href="" target="_blank">Website</a>
+          <a href="" target="_blank">LinkedIn</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="coach-card" 
+         data-region="New Zealand"
+         data-specialties="Technical Leadership,Strategic Technology"
+         data-remote="true">
+      <img class="coach-photo" src="https://substackcdn.com/image/fetch/w_128,h_128,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F6a26c884-8101-49bd-a80c-3e91183a699f_1970x1447.png" alt="Photo of Daniel Walters">
+      <div class="coach-info">
+        <h2>Daniel Walters</h2>
+        <p class="coach-bio">CTO Coach, author, and technology leader. Shares experiences leading technology for top SaaS companies through significant changes to compete and win against global behemoths. Co-h...</p>
+        <div class="coach-tags">
+          
+            <span class="tag">Leadership</span>
+          
+            <span class="tag">CTO Coach</span>
+          
+            <span class="tag">Author</span>
+          
+        </div>
+        <div class="coach-meta">
+          <span><strong>Location:</strong> , New Zealand</span><br>
+          <span><strong>Languages:</strong> English</span><br>
+          <span><strong>Specialties:</strong> Technical Leadership, Strategic Technology</span>
+        </div>
+        <div class="coach-links">
+          <a href="" target="_blank">Website</a>
+          <a href="https://www.linkedin.com/in/wioota/" target="_blank">LinkedIn</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="coach-card" 
+         data-region="UK"
+         data-specialties="Technical Leadership"
+         data-remote="true">
+      <img class="coach-photo" src="/assets/coach-placeholder.png" alt="Photo of Chris Brooke">
+      <div class="coach-info">
+        <h2>Chris Brooke</h2>
+        <p class="coach-bio">Fractional CTO | Advisor
+</p>
+        <div class="coach-tags">
+          
+            <span class="tag">Fractional CTO</span>
+          
+            <span class="tag">Advisor</span>
+          
+        </div>
+        <div class="coach-meta">
+          <span><strong>Location:</strong> Greater London, UK</span><br>
+          <span><strong>Languages:</strong> English</span><br>
+          <span><strong>Specialties:</strong> Technical Leadership</span>
+        </div>
+        <div class="coach-links">
+          <a href="" target="_blank">Website</a>
+          <a href="https://www.linkedin.com/in/chrisbrooke/" target="_blank">LinkedIn</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="coach-card" 
+         data-region="UK"
+         data-specialties="Technical Leadership"
+         data-remote="true">
+      <img class="coach-photo" src="" alt="Photo of Stefan Ross">
+      <div class="coach-info">
+        <h2>Stefan Ross</h2>
+        <p class="coach-bio">Fractional CTO | Coach
+</p>
+        <div class="coach-tags">
+          
+            <span class="tag">Fractional CTO</span>
+          
+            <span class="tag">Coach</span>
+          
+        </div>
+        <div class="coach-meta">
+          <span><strong>Location:</strong> Greater Cambridge Area, UK</span><br>
+          <span><strong>Languages:</strong> English</span><br>
+          <span><strong>Specialties:</strong> Technical Leadership</span>
+        </div>
+        <div class="coach-links">
+          <a href="" target="_blank">Website</a>
+          <a href="https://www.linkedin.com/in/rossstefan/" target="_blank">LinkedIn</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="coach-card" 
+         data-region="UK"
+         data-specialties="Technical Leadership"
+         data-remote="true">
+      <img class="coach-photo" src="" alt="Photo of Tom Clark">
+      <div class="coach-info">
+        <h2>Tom Clark</h2>
+        <p class="coach-bio">CTO Coach
+</p>
+        <div class="coach-tags">
+          
+            <span class="tag">CTO Coach</span>
+          
+        </div>
+        <div class="coach-meta">
+          <span><strong>Location:</strong> Woodsetts, England, UK</span><br>
+          <span><strong>Languages:</strong> English</span><br>
+          <span><strong>Specialties:</strong> Technical Leadership</span>
+        </div>
+        <div class="coach-links">
+          <a href="" target="_blank">Website</a>
+          <a href="https://www.linkedin.com/in/tomwclark/" target="_blank">LinkedIn</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="coach-card" 
+         data-region="Sweden"
+         data-specialties="Technical Leadership"
+         data-remote="true">
+      <img class="coach-photo" src="" alt="Photo of Martin Mazur">
+      <div class="coach-info">
+        <h2>Martin Mazur</h2>
+        <p class="coach-bio">Consultant | Coach. Author of Mazur.today
+</p>
+        <div class="coach-tags">
+          
+            <span class="tag">Consultant</span>
+          
+            <span class="tag">Coach</span>
+          
+        </div>
+        <div class="coach-meta">
+          <span><strong>Location:</strong> Greater Malmö Metropolitan Area, Sweden</span><br>
+          <span><strong>Languages:</strong> English, Swedish</span><br>
+          <span><strong>Specialties:</strong> Technical Leadership</span>
+        </div>
+        <div class="coach-links">
+          <a href="" target="_blank">Website</a>
+          <a href="https://www.linkedin.com/in/mazur/" target="_blank">LinkedIn</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="coach-card" 
+         data-region="UK"
+         data-specialties="Technical Leadership"
+         data-remote="true">
+      <img class="coach-photo" src="" alt="Photo of Joel Chippindale">
+      <div class="coach-info">
+        <h2>Joel Chippindale</h2>
+        <p class="coach-bio">CTO Coach
+</p>
+        <div class="coach-tags">
+          
+            <span class="tag">CTO Coach</span>
+          
+        </div>
+        <div class="coach-meta">
+          <span><strong>Location:</strong> London, UK</span><br>
+          <span><strong>Languages:</strong> English</span><br>
+          <span><strong>Specialties:</strong> Technical Leadership</span>
+        </div>
+        <div class="coach-links">
+          <a href="" target="_blank">Website</a>
+          <a href="https://www.linkedin.com/in/joelchippindale/" target="_blank">LinkedIn</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="coach-card" 
+         data-region="USA"
+         data-specialties="Technical Leadership"
+         data-remote="true">
+      <img class="coach-photo" src="" alt="Photo of Brad Schwartz">
+      <div class="coach-info">
+        <h2>Brad Schwartz</h2>
+        <p class="coach-bio">Tech Leader Coach
+</p>
+        <div class="coach-tags">
+          
+            <span class="tag">Tech Leader Coach</span>
+          
+        </div>
+        <div class="coach-meta">
+          <span><strong>Location:</strong> Portland, Oregon, USA</span><br>
+          <span><strong>Languages:</strong> English</span><br>
+          <span><strong>Specialties:</strong> Technical Leadership</span>
+        </div>
+        <div class="coach-links">
+          <a href="" target="_blank">Website</a>
+          <a href="https://www.linkedin.com/in/bradley-schwartz/" target="_blank">LinkedIn</a>
+          
+        </div>
+      </div>
+    </div>
+  
+</div>
+<script src="/assets/filters.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+# CTO Coach Directory Schema (YAML)
+# This schema defines the structure for each CTO coach entry in the directory.
+# Each coach should be represented as an object in a YAML array.
+
+# Example usage: Place all coach entries in a file like `cto_coaches.yaml` as a list.
+
+- id: unique-string-id
+  name: "Full Name"
+  bio: |
+    Short professional biography, background, and coaching philosophy.
+  photo: "https://link-to-photo.jpg"
+  contact:
+    email: "coach@email.com"
+    website: "https://coachwebsite.com"
+    linkedin: "https://linkedin.com/in/coach"
+    calendly: "https://calendly.com/coach"  # or other booking link
+    other: 
+      - label: "Twitter"
+        url: "https://twitter.com/coach"
+  location:
+    country: "Country"
+    city: "City"
+    timezone: "Region/City"
+    remote: true  # true if available for remote coaching
+  languages:
+    - "English"
+    - "Spanish"
+  tags:
+    - "SaaS"
+    - "Startups"
+    - "Scaleups"
+    - "Agile"
+    - "Leadership"
+  company_experience:
+    - name: "Company Name"
+      role: "CTO"
+      years: "2018-2022"
+      description: "Brief description of role and achievements."
+      industry: "Fintech"
+      size: "50-200"
+      stage: "Growth"
+      location: "Country"
+  coaching_specialties:
+    - "Technical Leadership"
+    - "Team Building"
+    - "Scaling Engineering"
+    - "Interim CTO"
+    - "Founder Coaching"
+  supported_company_types:
+    - "Startup"
+    - "Scaleup"
+    - "Enterprise"
+    - "Nonprofit"
+  supported_industries:
+    - "Fintech"
+    - "Healthtech"
+    - "E-commerce"
+  supported_geographies:
+    - "North America"
+    - "Europe"
+    - "Asia-Pacific"
+  pricing:
+    currency: "USD"
+    range: "200-400"
+    unit: "per hour"
+    notes: "Discounts for longer engagements"
+  availability:
+    accepting_new_clients: true
+    typical_response_time: "1-2 days"
+    notes: "Limited slots for Q3"
+  testimonials:
+    - author: "Client Name"
+      company: "Client Company"
+      quote: "Working with this coach was transformative for our team."
+      year: 2024
+  articles:
+    - title: "How to Scale Your Engineering Team"
+      url: "https://coachwebsite.com/articles/scale-team"
+      published: "2023-11-01"
+      type: "blog"
+    - title: "Podcast: CTOs in Startups"
+      url: "https://podcast.com/episode"
+      published: "2024-01-15"
+      type: "podcast"
+  resources:
+    - label: "YouTube Channel"
+      url: "https://youtube.com/coach"
+    - label: "Book"
+      url: "https://booklink.com"
+  submission_info:
+    submitted_by: "coach@email.com"
+    submitted_at: "2025-06-03"
+    last_updated: "2025-06-03"
+    status: "approved"  # or "pending", "rejected"
+  notes: |
+    Any additional notes or admin comments.
+
+# To add a new coach, copy the structure above and fill in the details.
+# This schema is designed for extensibility and can be easily adapted for Markdown frontmatter or other static site generators.

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title or "CTO Coach Directory" }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <!-- Removed inline style block to allow external styles.css to take effect -->
+</head>
+<body>
+  <header class="site-header">
+    <img src="https://substackcdn.com/image/fetch/w_80,h_80,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd09374a4-f0ad-4534-90e7-54aad90e6100_720x720.png" alt="GreatCTO Logo" class="site-logo">
+    <h1 class="directory-title">CTO Coach Directory</h1>
+    <div class="site-header-spacer"></div>
+  </header>
+  {{ content | safe }}
+</body>
+</html>

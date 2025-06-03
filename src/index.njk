@@ -1,0 +1,70 @@
+---
+layout: layout.njk
+title: CTO Coach Directory
+---
+
+<div class="filter-bar">
+  <label>
+    Region:
+    <select id="region-filter">
+      <option value="">All</option>
+      <option value="UK">UK</option>
+      <option value="EMEA">EMEA</option>
+      <option value="Americas">Americas</option>
+      <option value="Australia">Australia</option>
+      <option value="New Zealand">New Zealand</option>
+    </select>
+  </label>
+  <label>
+    Specialty:
+    <select id="specialty-filter">
+      <option value="">All</option>
+      {% for coach in sample_coaches %}
+        {% for spec in coach.coaching_specialties %}
+          <option value="{{ spec }}">{{ spec }}</option>
+        {% endfor %}
+      {% endfor %}
+    </select>
+  </label>
+  <label>
+    Remote:
+    <select id="remote-filter">
+      <option value="">All</option>
+      <option value="true">Remote</option>
+      <option value="false">Onsite</option>
+    </select>
+  </label>
+</div>
+
+<div class="coach-directory" id="coach-directory">
+  {% for coach in sample_coaches %}
+    <div class="coach-card" 
+         data-region="{{ coach.location.country }}"
+         data-specialties="{{ coach.coaching_specialties | join(',') }}"
+         data-remote="{{ coach.location.remote }}">
+      <img class="coach-photo" src="{{ coach.photo }}" alt="Photo of {{ coach.name }}">
+      <div class="coach-info">
+        <h2>{{ coach.name }}</h2>
+        <p class="coach-bio">{{ coach.bio | truncate(180, true, '...') }}</p>
+        <div class="coach-tags">
+          {% for tag in coach.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        <div class="coach-meta">
+          <span><strong>Location:</strong> {{ coach.location.city }}, {{ coach.location.country }}</span><br>
+          <span><strong>Languages:</strong> {{ coach.languages | join(', ') }}</span><br>
+          <span><strong>Specialties:</strong> {{ coach.coaching_specialties | join(', ') }}</span>
+        </div>
+        <div class="coach-links">
+          <a href="{{ coach.contact.website }}" target="_blank">Website</a>
+          <a href="{{ coach.contact.linkedin }}" target="_blank">LinkedIn</a>
+          {% if coach.contact.calendly %}
+            <a href="{{ coach.contact.calendly }}" target="_blank">Book a Call</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+<script src="/assets/filters.js"></script>
