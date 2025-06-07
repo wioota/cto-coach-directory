@@ -1,0 +1,257 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CTO Coach Schema",
+  "description": "Schema for CTO coach entries in the directory.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "name",
+      "bio"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier for the coach."
+      },
+      "name": {
+        "type": "string",
+        "description": "Full name of the coach."
+      },
+      "bio": {
+        "type": "string",
+        "description": "Short professional biography, background, and coaching philosophy."
+      },
+      "photo": {
+        "type": "string",
+        "oneOf": [
+          { "format": "uri" },
+          { "maxLength": 0 }
+        ],
+        "description": "URL to the coach's photo. Can be an empty string or a valid absolute URI."
+      },
+      "contact": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "oneOf": [
+              { "format": "email" },
+              { "maxLength": 0 }
+            ],
+            "description": "Coach's email address. Can be empty or a valid email."
+          },
+          "website": {
+            "type": "string",
+            "oneOf": [
+              { "format": "uri" },
+              { "maxLength": 0 }
+            ],
+            "description": "Coach's website URL. Can be empty or a valid URI."
+          },
+          "linkedin": {
+            "type": "string",
+            "oneOf": [
+              { "format": "uri" },
+              { "maxLength": 0 }
+            ],
+            "description": "LinkedIn profile URL. Can be empty or a valid URI."
+          },
+          "calendly": {
+            "type": "string",
+            "oneOf": [
+              { "format": "uri" },
+              { "maxLength": 0 }
+            ],
+            "description": "Calendly or other booking link. Can be empty or a valid URI."
+          },
+          "other": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "label": {"type": "string"},
+                "url": {
+                  "type": "string",
+                  "oneOf": [
+                    { "format": "uri" },
+                    { "maxLength": 0 }
+                  ],
+                  "description": "URL for other contact method. Can be empty or a valid URI."
+                }
+              },
+              "required": ["label", "url"]
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "location": {
+        "type": "object",
+        "properties": {
+          "country": {"type": "string"},
+          "city": {"type": "string"},
+          "timezone": {"type": "string", "description": "e.g., Region/City"},
+          "remote": {"type": "boolean", "description": "True if available for remote coaching."}
+        },
+        "additionalProperties": false
+      },
+      "languages": {
+        "type": "array",
+        "items": {"type": "string"}
+      },
+      "tags": {
+        "type": "array",
+        "items": {"type": "string"}
+      },
+      "company_experience": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {"type": "string"},
+            "role": {"type": "string"},
+            "years": {"type": "string"},
+            "description": {"type": "string"},
+            "industry": {"type": "string"},
+            "size": {"type": "string"},
+            "stage": {"type": "string"},
+            "location": {"type": "string"}
+          },
+          "additionalProperties": false
+        }
+      },
+      "coaching_specialties": {
+        "type": "array",
+        "items": {"type": "string"}
+      },
+      "supported_company_types": {
+        "type": "array",
+        "items": {"type": "string"}
+      },
+      "supported_industries": {
+        "type": "array",
+        "items": {"type": "string"}
+      },
+      "supported_geographies": {
+        "type": "array",
+        "items": {"type": "string"}
+      },
+      "pricing": {
+        "type": "object",
+        "properties": {
+          "currency": {"type": "string"},
+          "range": {"type": "string", "description": "e.g., 200-400"},
+          "unit": {"type": "string", "description": "e.g., per hour"},
+          "notes": {"type": "string"}
+        },
+        "additionalProperties": false
+      },
+      "availability": {
+        "type": "object",
+        "properties": {
+          "accepting_new_clients": {"type": "boolean"},
+          "typical_response_time": {"type": "string"},
+          "notes": {"type": "string"}
+        },
+        "additionalProperties": false
+      },
+      "testimonials": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "author": {"type": "string"},
+            "company": {"type": "string"},
+            "quote": {"type": "string"},
+            "year": {"type": "integer"}
+          },
+          "additionalProperties": false
+        }
+      },
+      "articles": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {"type": "string"},
+            "url": {
+              "type": "string",
+              "oneOf": [
+                { "format": "uri" },
+                { "maxLength": 0 }
+              ],
+              "description": "URL of the article. Can be empty or a valid URI."
+            },
+            "published": {
+              "type": "string",
+              "oneOf": [
+                { "format": "date" },
+                { "maxLength": 0 }
+              ],
+              "description": "Publication date of the article. Can be empty or a valid date."
+            },
+            "type": {"type": "string"}
+          },
+          "additionalProperties": false
+        }
+      },
+      "resources": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "label": {"type": "string"},
+            "url": {
+              "type": "string",
+              "oneOf": [
+                { "format": "uri" },
+                { "maxLength": 0 }
+              ],
+              "description": "URL of the resource. Can be empty or a valid URI."
+            }
+          },
+          "required": ["label", "url"],
+          "additionalProperties": false
+        }
+      },
+      "submission_info": {
+        "type": "object",
+        "properties": {
+          "submitted_by": {
+            "type": "string",
+            "oneOf": [
+              { "format": "email" },
+              { "maxLength": 0 }
+            ],
+            "description": "Submitter's email address. Can be empty or a valid email."
+          },
+          "submitted_at": {
+            "type": "string",
+            "oneOf": [
+              { "format": "date-time" },
+              { "maxLength": 0 }
+            ],
+            "description": "Submission timestamp. Can be empty or a valid date-time."
+          },
+          "last_updated": {
+            "type": "string",
+            "oneOf": [
+              { "format": "date-time" },
+              { "maxLength": 0 }
+            ],
+            "description": "Last update timestamp. Can be empty or a valid date-time."
+          },
+          "status": {"type": "string", "enum": ["approved", "pending", "rejected", "imported"]}
+        },
+        "additionalProperties": false
+      },
+      "notes": {
+        "type": "string",
+        "description": "Any additional notes or admin comments."
+      }
+    },
+    "additionalProperties": false
+  }
+}

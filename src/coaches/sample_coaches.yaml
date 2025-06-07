@@ -592,7 +592,7 @@
   name: "Chris Brooke"
   bio: |
     Fractional CTO | Advisor
-  photo: ""
+  photo: "/assets/coach-placeholder.png"
   contact:
     email: ""
     website: ""
