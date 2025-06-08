@@ -5,7 +5,7 @@ const addFormats = require("ajv-formats");
 
 module.exports = function(eleventyConfig) {
   // Pass through static assets (CSS, images, etc.)
-  eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
   // Load the JSON schema for coaches
   const coachSchemaSource = 'cto_coaches.jsonschema.json';
