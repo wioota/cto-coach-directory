@@ -74,7 +74,7 @@ title: CTO Coach Directory
          data-geographies="{{ coach.supported_geographies | join(',') }}"
          data-specialties="{{ coach.coaching_specialties | join(',') }}"
          data-remote="{{ coach.location.remote }}">
-      <img class="coach-photo" src="{{ coach.photo or '/assets/coach-placeholder.svg' | url }}" alt="Photo of {{ coach.name }}">
+      <img class="coach-photo" src="{{ coach.photo if coach.photo else '/assets/coach-placeholder.svg' | url }}" alt="Photo of {{ coach.name }}">
       <div class="coach-info">
         <h2>{{ coach.name }}</h2>
         <p class="coach-bio">{{ coach.bio | truncate(180, true, '...') }}</p>
