@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npx eleventy",
+    "build:prod": "env NODE_ENV=production npx eleventy --pathprefix 'cto-coach-directory'",
+    "serve": "npx eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
