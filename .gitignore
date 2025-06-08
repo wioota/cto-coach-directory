@@ -23,4 +23,6 @@ yarn-error.log*
 
 # VSCode
 .vscode/
+
+# Trigger: updated placeholder image for CTO Coach Directory
 >>>>>>> 26d3a33 (Remove node_modules and _site from tracking; add .gitignore)
