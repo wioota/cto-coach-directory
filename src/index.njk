@@ -19,10 +19,17 @@ title: CTO Coach Directory
     Specialty:
     <select id="specialty-filter">
       <option value="">All</option>
+      {# Build a unique set of specialties #}
+      {% set all_specialties = [] %}
       {% for coach in sample_coaches %}
         {% for spec in coach.coaching_specialties %}
-          <option value="{{ spec }}">{{ spec }}</option>
+          {% if spec not in all_specialties %}
+            {% set all_specialties = all_specialties.concat([spec]) %}
+          {% endif %}
         {% endfor %}
+      {% endfor %}
+      {% for spec in all_specialties %}
+        <option value="{{ spec }}">{{ spec }}</option>
       {% endfor %}
     </select>
   </label>
