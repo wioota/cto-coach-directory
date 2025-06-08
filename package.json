@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx eleventy",
-    "build:prod": "env NODE_ENV=production npx eleventy --pathprefix 'cto-coach-directory'",
+    "build:prod": "cross-env NODE_ENV=production npx eleventy --pathprefix 'cto-coach-directory'",
     "serve": "npx eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,7 +14,8 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.0"
+    "@11ty/eleventy": "^3.1.0",
+    "cross-env": "^7.0.3"
   },
   "dependencies": {
     "ajv": "^8.17.1",
