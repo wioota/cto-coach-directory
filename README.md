@@ -83,5 +83,6 @@ See `cto_coaches.schema.yaml` for the full data structure and required fields.
 - **License:** MIT
 
 ---
+This is a community effort. 
 
 For any questions or issues, please contact [Daniel Walters](https://github.com/wioota).
