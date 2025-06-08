@@ -5,7 +5,7 @@ title: CTO Coach Directory
 
 <div class="filter-bar">
   <label>
-    Region:
+    Coach Location:
     <select id="region-filter">
       <option value="">All</option>
       {# Build a unique set of regions from location.country #}
@@ -18,6 +18,24 @@ title: CTO Coach Directory
       {% endfor %}
       {% for region in all_regions %}
         <option value="{{ region }}">{{ region }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>
+    Geographies Covered:
+    <select id="geography-filter">
+      <option value="">All</option>
+      {# Build a unique set of geographies from supported_geographies #}
+      {% set all_geographies = [] %}
+      {% for coach in sample_coaches %}
+        {% for geo in coach.supported_geographies %}
+          {% if geo and geo not in all_geographies %}
+            {% set all_geographies = all_geographies.concat([geo]) %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+      {% for geo in all_geographies %}
+        <option value="{{ geo }}">{{ geo }}</option>
       {% endfor %}
     </select>
   </label>
@@ -53,6 +71,7 @@ title: CTO Coach Directory
   {% for coach in sample_coaches %}
     <div class="coach-card" 
          data-region="{{ coach.location.country }}"
+         data-geographies="{{ coach.supported_geographies | join(',') }}"
          data-specialties="{{ coach.coaching_specialties | join(',') }}"
          data-remote="{{ coach.location.remote }}">
       <img class="coach-photo" src="{{ coach.photo }}" alt="Photo of {{ coach.name }}">
