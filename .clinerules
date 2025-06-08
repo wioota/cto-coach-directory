@@ -1,0 +1,19 @@
+# Cline Rules for CTO Coach Directory
+# Trigger: force GitHub Actions workflow run
+
+[continuous-learning]
+description = "Whenever a new user preference, coding style, or workflow insight is discovered, immediately propose an update to the .clinerules file to capture this knowledge for future sessions and contexts."
+action = "Prompt the user to confirm and add a new rule reflecting the learned preference or insight."
+enforce = true
+
+[path-handling]
+description = "Always use forward slashes in file paths and prefer project-relative paths unless otherwise specified."
+enforce = true
+
+[communication]
+description = "Avoid unnecessary follow-up questions. Be concise and direct in all responses and commit messages."
+enforce = true
+
+[file-operations]
+description = "Never overwrite or delete files without explicit user confirmation."
+enforce = true
