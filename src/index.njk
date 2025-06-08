@@ -8,11 +8,17 @@ title: CTO Coach Directory
     Region:
     <select id="region-filter">
       <option value="">All</option>
-      <option value="UK">UK</option>
-      <option value="EMEA">EMEA</option>
-      <option value="Americas">Americas</option>
-      <option value="Australia">Australia</option>
-      <option value="New Zealand">New Zealand</option>
+      {# Build a unique set of regions from location.country #}
+      {% set all_regions = [] %}
+      {% for coach in sample_coaches %}
+        {% set country = coach.location.country %}
+        {% if country and country not in all_regions %}
+          {% set all_regions = all_regions.concat([country]) %}
+        {% endif %}
+      {% endfor %}
+      {% for region in all_regions %}
+        <option value="{{ region }}">{{ region }}</option>
+      {% endfor %}
     </select>
   </label>
   <label>
