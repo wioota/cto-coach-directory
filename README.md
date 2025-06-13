@@ -19,13 +19,11 @@ This repository contains the source code and data for the CTO Coach Directory pr
    cd cto-coach-directory
    ```
 
-
 2. **Install dependencies:**
 
    ```sh
    npm install
    ```
-
 
 ## Building the Site
 
@@ -40,7 +38,6 @@ or, if you have Eleventy installed globally:
 ```sh
 eleventy
 ```
-
 
 The output will be generated in the `_site/` directory.
 
@@ -80,7 +77,6 @@ The "database" for this project consists of YAML files located in `src/coaches/`
      bio: >
        Jane has 20+ years of experience leading technology teams...
    ```
-
 
 4. Save your changes. The site will automatically include new or updated coaches on the next build.
 
