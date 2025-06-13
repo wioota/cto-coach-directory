@@ -10,7 +10,7 @@ title: CTO Coach Directory
       <option value="">All</option>
       {# Build a unique set of regions from location.country #}
       {% set all_regions = [] %}
-      {% for coach in sample_coaches %}
+      {% for coach in coaches %}
         {% set country = coach.location.country %}
         {% if country and country not in all_regions %}
           {% set all_regions = all_regions.concat([country]) %}
@@ -27,7 +27,7 @@ title: CTO Coach Directory
       <option value="">All</option>
       {# Build a unique set of geographies from supported_geographies #}
       {% set all_geographies = [] %}
-      {% for coach in sample_coaches %}
+      {% for coach in coaches %}
         {% for geo in coach.supported_geographies %}
           {% if geo and geo not in all_geographies %}
             {% set all_geographies = all_geographies.concat([geo]) %}
@@ -45,7 +45,7 @@ title: CTO Coach Directory
       <option value="">All</option>
       {# Build a unique set of specialties #}
       {% set all_specialties = [] %}
-      {% for coach in sample_coaches %}
+      {% for coach in coaches %}
         {% for spec in coach.coaching_specialties %}
           {% if spec not in all_specialties %}
             {% set all_specialties = all_specialties.concat([spec]) %}
@@ -68,7 +68,7 @@ title: CTO Coach Directory
 </div>
 
 <div class="coach-directory" id="coach-directory">
-  {% for coach in sample_coaches %}
+  {% for coach in coaches %}
     <div class="coach-card" 
          data-region="{{ coach.location.country }}"
          data-geographies="{{ coach.supported_geographies | join(',') }}"

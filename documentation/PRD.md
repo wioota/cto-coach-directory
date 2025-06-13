@@ -31,7 +31,7 @@ This document outlines the requirements, architecture, and guidelines for the Gr
   - Scripts: `build` for development build, `build:prod` for production build.
   - CI/CD defined in .github/workflows/build.yml.
 - **Architecture Notes**:
-  - The project uses a simple static site architecture, with data from src/coaches/sample_coaches.yaml.
+  - The project uses a simple static site architecture, with data from src/coaches/coaches.yaml.
   - Future enhancements can include backend integration for dynamic data.
 
 ## Appendix

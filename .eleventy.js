@@ -23,9 +23,9 @@ module.exports = function(eleventyConfig) {
   const validateCoachArray = ajv.compile(coachSchema); // Validator for the whole array of coaches
   const validateSingleCoach = ajv.compile(coachSchema.items); // Validator for a single coach object
 
-  // Load, validate, and provide coach data from sample_coaches.yaml
-  // This will make `sample_coaches` globally available in templates.
-  const coachDataPath = "src/coaches/sample_coaches.yaml";
+  // Load, validate, and provide coach data from coaches.yaml
+  // This will make `coaches` globally available in templates.
+  const coachDataPath = "src/coaches/coaches.yaml";
   let validatedCoaches = [];
   try {
     const fileContents = fs.readFileSync(coachDataPath, 'utf8');
@@ -51,7 +51,7 @@ module.exports = function(eleventyConfig) {
       }
 
     } else {
-      // This case handles if sample_coaches.yaml is not an array (which would be a schema violation itself)
+      // This case handles if coaches.yaml is not an array (which would be a schema violation itself)
       console.error(`[Validation Error] Data in ${coachDataPath} is not an array as expected by the root schema. No coach data will be loaded.`);
       validatedCoaches = []; // Ensure it's an empty array if the top-level structure is wrong
     }
@@ -61,7 +61,7 @@ module.exports = function(eleventyConfig) {
     // For now, it defaults to an empty array of coaches.
     validatedCoaches = [];
   }
-  eleventyConfig.addGlobalData("sample_coaches", validatedCoaches);
+  eleventyConfig.addGlobalData("coaches", validatedCoaches);
 
   // The original YAML data extension is still useful for any other YAML files
   // that are not coaches and are loaded by Eleventy's default mechanisms.

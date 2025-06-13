@@ -56,7 +56,7 @@ The "database" for this project consists of YAML files located in `src/coaches/`
 
 ### To add or update a coach:
 
-1. Open or create a YAML file in `src/coaches/` (e.g., `sample_coaches.yaml`).
+1. Open or create a YAML file in `src/coaches/` (e.g., `coaches.yaml`).
 2. Follow the schema defined in `cto_coaches.schema.yaml` to ensure data consistency.
 3. Example entry:
    ```yaml

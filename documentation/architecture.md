@@ -10,7 +10,7 @@ flowchart TD
     B --> C[Frontend Components]
     C --> D[HTML/CSS/JS]
     C --> E[Data Filtering]
-    E --> F[sample_coaches.yaml]
+    E --> F[coaches.yaml]
     D --> G[User Interface]
     G --> H[Display Coaches]
 ```
@@ -37,7 +37,7 @@ Simplifies the data handling between frontend and data source.
 flowchart LR
     A[User Request] --> B[Frontend]
     B --> C[Backend Implicit]
-    C --> D[sample_coaches.yaml]
+    C --> D[coaches.yaml]
     D --> E[Data Processing]
     E --> B
     B --> F[Response to User]
