@@ -17,3 +17,7 @@ enforce = true
 [file-operations]
 description = "Never overwrite or delete files without explicit user confirmation."
 enforce = true
+
+[data-handling]
+description = "The project uses coaches.yaml as the full database file, not a sample. Always reference this file in code and documentation."
+enforce = true
