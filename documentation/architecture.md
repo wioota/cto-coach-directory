@@ -1,10 +1,11 @@
 # Architectural Diagrams for GreatCTO Project
 
 ## C4 Container Diagram
+
 This diagram visualizes the system architecture using containers and their interactions.
 
 ```mermaid
-graph TD
+flowchart TD
     A[Static Site Generator] --> B[eleventy.js]
     B --> C[Frontend Components]
     C --> D[HTML/CSS/JS]
@@ -15,6 +16,7 @@ graph TD
 ```
 
 ## Sequence Diagram for Build Process
+
 This diagram shows the sequence of actions during the build process.
 
 ```mermaid
@@ -28,12 +30,13 @@ sequenceDiagram
 ```
 
 ## Data Flow Diagram
+
 Simplifies the data handling between frontend and data source.
 
 ```mermaid
-graph LR
+flowchart LR
     A[User Request] --> B[Frontend]
-    B --> C[Backend (Implicit)]
+    B --> C[Backend Implicit]
     C --> D[sample_coaches.yaml]
     D --> E[Data Processing]
     E --> B
@@ -41,5 +44,6 @@ graph LR
 ```
 
 ## Notes
+
 - These diagrams are based on reverse engineering and can be expanded with more details.
 - Use Mermaid tools to render these diagrams in Markdown viewers.
