@@ -13,26 +13,49 @@ function tryHttpsUrl(url) {
   return url;
 }
 
-async function checkUrl(url, timeout = 5000) {
+async function checkUrl(url, timeout = 5000, allowHttpFallback = false, attemptCount = 0) {
+  const maxAttempts = 2; // Prevent infinite recursion
+
   return new Promise((resolve) => {
     if (!url || url === '') {
       resolve({ url, status: 'empty', message: 'Empty URL' });
       return;
     }
-    
+
+    // Prevent infinite recursion
+    if (attemptCount >= maxAttempts) {
+      resolve({ url, status: 'error', message: 'Max retry attempts exceeded' });
+      return;
+    }
+
     try {
+      let targetUrl = url;
+      let isHttpsUpgrade = false;
+
       // Try to upgrade HTTP URLs to HTTPS for security
-      const secureUrl = tryHttpsUrl(url);
-      const urlObj = new URL(secureUrl);
-      
+      if (url.startsWith('http:')) {
+        const httpsUrl = url.replace(/^http:/, 'https:');
+        if (allowHttpFallback) {
+          targetUrl = httpsUrl;
+          isHttpsUpgrade = true;
+          console.warn(`⚠️  Security warning: Attempting to upgrade insecure URL from ${url} to ${httpsUrl}`);
+        } else {
+          console.warn(`🚫  Security policy: Rejecting insecure HTTP URL ${url} (HTTPS-only mode)`);
+          resolve({ url, status: 'error', message: 'HTTP URLs not allowed in HTTPS-only mode' });
+          return;
+        }
+      }
+
+      const urlObj = new URL(targetUrl);
+
       // Log warning if still using HTTP after attempted upgrade
       if (urlObj.protocol === 'http:') {
-        console.warn(`⚠️  Security warning: Using insecure HTTP protocol for ${secureUrl}`);
+        console.warn(`⚠️  Security warning: Using insecure HTTP protocol for ${targetUrl}`);
       }
-      
-      // Prefer HTTPS, but fall back to HTTP if necessary
+
+      // Use HTTPS client (HTTP fallback only if explicitly allowed)
       const client = urlObj.protocol === 'https:' ? https : http;
-      
+
       const req = client.request({
         hostname: urlObj.hostname,
         port: urlObj.port,
@@ -44,8 +67,8 @@ async function checkUrl(url, timeout = 5000) {
         }
       }, (res) => {
         // Track if we're using the original or upgraded URL
-        const resultUrl = secureUrl !== url ? secureUrl : url;
-        
+        const resultUrl = isHttpsUpgrade ? targetUrl : url;
+
         if (res.statusCode >= 200 && res.statusCode < 400) {
           resolve({ url: resultUrl, originalUrl: url, status: 'ok', code: res.statusCode });
         } else if (res.statusCode >= 300 && res.statusCode < 400) {
@@ -54,21 +77,24 @@ async function checkUrl(url, timeout = 5000) {
           resolve({ url: resultUrl, originalUrl: url, status: 'error', code: res.statusCode });
         }
       });
-      
+
       req.on('error', (err) => {
-        // If HTTPS upgrade failed, try the original HTTP URL as fallback
-        if (secureUrl !== url && err.message.includes('ECONNREFUSED')) {
-          console.warn(`⚠️  HTTPS upgrade failed for ${secureUrl}, falling back to original HTTP URL ${url}`);
-          return checkUrl(url, timeout);
+        req.destroy(); // Ensure request is properly cleaned up
+
+        // If HTTPS upgrade failed and HTTP fallback is allowed, try the original HTTP URL
+        if (isHttpsUpgrade && allowHttpFallback && err.message.includes('ECONNREFUSED')) {
+          console.warn(`⚠️  HTTPS upgrade failed for ${targetUrl}, falling back to original HTTP URL ${url}`);
+          return checkUrl(url, timeout, allowHttpFallback, attemptCount + 1);
         }
+
         resolve({ url, status: 'error', message: err.message });
       });
-      
+
       req.on('timeout', () => {
         req.destroy();
         resolve({ url, status: 'timeout', message: 'Request timeout' });
       });
-      
+
       req.end();
     } catch (err) {
       resolve({ url, status: 'invalid', message: err.message });
