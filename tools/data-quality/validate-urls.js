@@ -3,15 +3,6 @@ const yaml = require('js-yaml');
 const https = require('https');
 const http = require('http');
 
-// Function to attempt upgrading HTTP URLs to HTTPS
-function tryHttpsUrl(url) {
-  if (url && url.startsWith('http:')) {
-    const httpsUrl = url.replace(/^http:/, 'https:');
-    console.warn(`⚠️  Security warning: Attempting to upgrade insecure URL from ${url} to ${httpsUrl}`);
-    return httpsUrl;
-  }
-  return url;
-}
 
 async function checkUrl(url, timeout = 5000, allowHttpFallback = false, attemptCount = 0) {
   const maxAttempts = 2; // Prevent infinite recursion
@@ -61,7 +52,6 @@ async function checkUrl(url, timeout = 5000, allowHttpFallback = false, attemptC
         port: urlObj.port,
         path: urlObj.pathname + urlObj.search,
         method: 'HEAD',
-        timeout: timeout,
         headers: {
           'User-Agent': 'Mozilla/5.0 (compatible; URL-Checker/1.0)'
         }
@@ -78,6 +68,12 @@ async function checkUrl(url, timeout = 5000, allowHttpFallback = false, attemptC
         }
       });
 
+      // Set up proper timeout handling
+      req.setTimeout(timeout, () => {
+        req.destroy();
+        resolve({ url, status: 'timeout', message: 'Request timed out' });
+      });
+
       req.on('error', (err) => {
         req.destroy(); // Ensure request is properly cleaned up
 
@@ -90,14 +86,10 @@ async function checkUrl(url, timeout = 5000, allowHttpFallback = false, attemptC
         resolve({ url, status: 'error', message: err.message });
       });
 
-      req.on('timeout', () => {
-        req.destroy();
-        resolve({ url, status: 'timeout', message: 'Request timeout' });
-      });
-
       req.end();
+
     } catch (err) {
-      resolve({ url, status: 'invalid', message: err.message });
+      resolve({ url, status: 'error', message: err.message });
     }
   });
 }
@@ -105,12 +97,12 @@ async function checkUrl(url, timeout = 5000, allowHttpFallback = false, attemptC
 async function validateCoachUrls() {
   try {
     const data = yaml.load(fs.readFileSync('src/coaches/coaches.yaml', 'utf8'));
-    
+
     console.log(`\n=== URL VALIDATION REPORT ===`);
     console.log(`Checking URLs for ${data.length} coaches...\n`);
-    
+
     const urlChecks = [];
-    
+
     for (const coach of data) {
       // Check website
       if (coach.contact?.website) {
@@ -120,7 +112,7 @@ async function validateCoachUrls() {
           ...result
         })));
       }
-      
+
       // Check LinkedIn
       if (coach.contact?.linkedin) {
         urlChecks.push(checkUrl(coach.contact.linkedin).then(result => ({
@@ -129,7 +121,7 @@ async function validateCoachUrls() {
           ...result
         })));
       }
-      
+
       // Check Calendly
       if (coach.contact?.calendly) {
         urlChecks.push(checkUrl(coach.contact.calendly).then(result => ({
@@ -139,9 +131,9 @@ async function validateCoachUrls() {
         })));
       }
     }
-    
+
     const results = await Promise.all(urlChecks);
-    
+
     // Group results by status
     const grouped = {
       ok: [],
@@ -150,35 +142,35 @@ async function validateCoachUrls() {
       invalid: [],
       redirect: []
     };
-    
+
     results.forEach(result => {
       grouped[result.status].push(result);
     });
-    
+
     // Report findings
     console.log(`✅ Working URLs (${grouped.ok.length}):`);
     grouped.ok.forEach(r => console.log(`  ${r.coach} - ${r.type}: ${r.url} (${r.code})`));
-    
+
     if (grouped.redirect.length > 0) {
       console.log(`\n🔄 Redirects (${grouped.redirect.length}):`);
       grouped.redirect.forEach(r => console.log(`  ${r.coach} - ${r.type}: ${r.url} → ${r.location || 'unknown'} (${r.code})`));
     }
-    
+
     if (grouped.error.length > 0) {
       console.log(`\n❌ Errors (${grouped.error.length}):`);
       grouped.error.forEach(r => console.log(`  ${r.coach} - ${r.type}: ${r.url} (${r.code || r.message})`));
     }
-    
+
     if (grouped.timeout.length > 0) {
       console.log(`\n⏰ Timeouts (${grouped.timeout.length}):`);
       grouped.timeout.forEach(r => console.log(`  ${r.coach} - ${r.type}: ${r.url}`));
     }
-    
+
     if (grouped.invalid.length > 0) {
       console.log(`\n🚫 Invalid URLs (${grouped.invalid.length}):`);
       grouped.invalid.forEach(r => console.log(`  ${r.coach} - ${r.type}: ${r.url} (${r.message})`));
     }
-    
+
     console.log(`\n=== SUMMARY ===`);
     console.log(`Total URLs checked: ${results.length}`);
     console.log(`Working: ${grouped.ok.length}`);
@@ -186,7 +178,7 @@ async function validateCoachUrls() {
     console.log(`Errors: ${grouped.error.length}`);
     console.log(`Timeouts: ${grouped.timeout.length}`);
     console.log(`Invalid: ${grouped.invalid.length}`);
-    
+
   } catch (e) {
     console.error('Error:', e.message);
   }

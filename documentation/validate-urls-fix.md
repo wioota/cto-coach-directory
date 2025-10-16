@@ -79,11 +79,10 @@ async function checkUrl(url, timeout = 5000) {
         // If HTTPS upgrade failed, try the original HTTP URL as fallback
         if (secureUrl !== url && err.message.includes('ECONNREFUSED')) {
           console.warn(`⚠️  HTTPS upgrade failed for ${secureUrl}, falling back to original HTTP URL ${url}`);
-          return checkUrl(url, timeout);
+          return checkUrl(url, timeout).then(resolve);
         }
         resolve({ url, status: 'error', message: err.message });
-      });
-      
+      });      
       req.on('timeout', () => {
         req.destroy();
         resolve({ url, status: 'timeout', message: 'Request timeout' });

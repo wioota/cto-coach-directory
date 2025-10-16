@@ -4,13 +4,20 @@ const { checkUrl } = require('./validate-urls');
 async function testHttpUpgrade() {
   console.log('Testing HTTP to HTTPS upgrade functionality...');
   
-  // Test with an HTTP URL that should be upgraded to HTTPS
-  const httpResult = await checkUrl('http://example.com');
-  console.log('HTTP URL test result:', httpResult);
-  
-  // Test with an HTTPS URL (should remain unchanged)
-  const httpsResult = await checkUrl('https://example.com');
-  console.log('HTTPS URL test result:', httpsResult);
+  try {
+    // Test with an HTTP URL that should be upgraded to HTTPS
+    const httpResult = await checkUrl('http://example.com');
+    console.log('HTTP URL test result:', httpResult);
+    
+    // Test with an HTTPS URL (should remain unchanged)
+    const httpsResult = await checkUrl('https://example.com');
+    console.log('HTTPS URL test result:', httpsResult);
+  } catch (error) {
+    console.error('Test failed:', error);
+    process.exit(1);
+  }
 }
-
-testHttpUpgrade();
+testHttpUpgrade().catch(error => {
+  console.error('Unhandled error:', error);
+  process.exit(1);
+});
