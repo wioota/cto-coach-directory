@@ -1231,7 +1231,7 @@
   name: "Marian Kamenistak"
   bio: |
     CTO Coach & Engineering Leadership Mentor / Fractional CTO. Founder & Chief Coach of the Engineering Leaders Community (ELC), a 2,000+ member community across Central Europe with monthly meetups (120+ leaders each), 5 peer circles, and the annual Engineering Leaders Conference (500+ attendees, covered by Czech Television, speakers from Netflix and Stripe). 3,000+ mentoring sessions delivered to 300+ engineering leaders. Combines 1:1 mentoring with community-based, peer-cohort learning. Mentoring-first: direct steps for the specific call, not theory.
-  photo: ""
+  photo: "https://www.marian.coach/_astro/marian-about.BisGE32e_2cIdzt.webp"
   contact:
     email: ""
     website: "https://www.marian.coach/"
@@ -1304,15 +1304,35 @@
     - "EMEA"
     - "Global"
   pricing:
-    currency: ""
-    range: ""
-    unit: ""
-    notes: ""
+    currency: "EUR"
+    range: "430"
+    unit: "per session"
+    notes: "Discounts on multi-session packages."
   availability:
     accepting_new_clients: true
     typical_response_time: ""
     notes: ""
-  testimonials: []
+  testimonials:
+    - author: "Matthijs Welle"
+      company: "Mews"
+      quote: "Marian was part of helping scale up our technical teams from 35 to 100 people during his time with Mews. One of his key successes was around creating visibility on engineering output and ensuring we were able to more effectively reach our goals."
+      year: 2026
+      date: "2026-02-18"
+    - author: "Marek Trunkat"
+      company: "Apify"
+      quote: "Marian helped me to stabilize and mature our engineering in Apify after a period of growth. In mentoring, we focused on many areas across product-engineering cooperation, career framework, team alignment, and agility. But mainly, he changed how I view my role and the role of the engineering department in the organization."
+      year: 2026
+      date: "2026-04-09"
+    - author: "Idan Fridman"
+      company: "DraftKings"
+      quote: "Marian is a true professional with vast experience. I was pleased to work, learn, and discuss essential development matters such as SDLC, OKRs, and team management tactics with Marian at our 15+ sessions. I recommend Marian with complete trust."
+      year: 2026
+      date: "2026-03-22"
+    - author: "Michal Danilak"
+      company: "Monitora"
+      quote: "Marian has been incredibly helpful in my professional development. He helped me transition from an operational role to a more strategic one, showing me not only how to grow a team but the importance of understanding the 'why' behind it. Every session gave me practical tips and valuable resources."
+      year: 2026
+      date: "2026-06-05"
   articles:
     - title: "marian.coach"
       url: "https://www.marian.coach/"
