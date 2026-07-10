@@ -1226,3 +1226,77 @@
     last_updated: ""
     status: "imported"
   notes: ""
+
+- id: "coach-marian-kamenistak"
+  name: "Marian Kamenistak"
+  bio: |
+    CTO Coach & Engineering Leadership Mentor / Fractional CTO. Founder of the Engineering Leaders Community (2,000+ members across Central Europe). 3,000+ mentoring sessions with 300+ engineering leaders. Mentoring-first: direct steps for the specific call, not theory.
+  photo: ""
+  contact:
+    email: ""
+    website: "https://www.marian.coach/"
+    linkedin: "https://www.linkedin.com/in/mariankamenistak/"
+    calendly: ""
+    other: []
+  location:
+    country: "Czech Republic"
+    city: "Prague"
+    timezone: "CET"
+    remote: true
+  languages:
+    - "English"
+    - "Czech"
+    - "Slovak"
+  tags:
+    - "CTO Coach"
+    - "Engineering Leadership"
+    - "Mentor"
+    - "Fractional CTO"
+  company_experience:
+    - name: "Engineering Leaders Community (ELC)"
+      role: "Founder & Chief Coach"
+      years: ""
+      description: ""
+      industry: "Technology"
+      size: ""
+      stage: ""
+      location: "Prague, Czech Republic"
+  coaching_specialties:
+    - "Technical Leadership"
+    - "Engineering Management"
+    - "Mentoring"
+    - "Fractional CTO"
+  supported_company_types:
+    - "Startup"
+    - "Scaleup"
+    - "Enterprise"
+  supported_industries:
+    - "Technology"
+    - "SaaS"
+  supported_geographies:
+    - "Czech Republic"
+    - "CEE"
+    - "EMEA"
+    - "Global"
+  pricing:
+    currency: ""
+    range: ""
+    unit: ""
+    notes: ""
+  availability:
+    accepting_new_clients: true
+    typical_response_time: ""
+    notes: ""
+  testimonials: []
+  articles:
+    - title: "marian.coach"
+      url: "https://www.marian.coach/"
+      published: ""
+      type: "website"
+  resources: []
+  submission_info:
+    submitted_by: "Marian Kamenistak"
+    submitted_at: ""
+    last_updated: ""
+    status: "submitted"
+    notes: ""
